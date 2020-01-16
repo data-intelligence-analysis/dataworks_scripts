@@ -1,2 +1,2 @@
 # dataworks_scripts
-Automation scripts for inspecting, normalizing, and cleaning data 
+Automation scripts for inspecting, normalizing, iterrograting, and cleaning data 
