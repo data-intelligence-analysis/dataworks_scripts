@@ -108,6 +108,7 @@ blacklist:Optional[List[str]]=SILLY_DELIMITERS) -> Optional[str]:
 
     return likely_candidates[0]
 
+#Remove Special Characters 
 with open('config.txt', 'r') as input: #config.txt contains directory (path) to folder
     #read path
     read = input.readline()
@@ -115,7 +116,7 @@ with open('config.txt', 'r') as input: #config.txt contains directory (path) to 
     index = read[read.index('/'):]
     
     #Using os library to read and open files in directory
-    for file in os.listdir(index):#("C:\\Users\\DO069840\\OneDrive - Cerner Corporation\\Desktop\\Correct_HeaderRows")
+    for file in os.listdir(index):#("directory is in config.txt e.g.")
         if file.endswith(".txt") and not file.startswith(("config","README","LICENSE-2.0")):
             with open("header.txt","rt") as infile, open("header_repaired.txt", "wt") as outfile:
                 #Read Input File
