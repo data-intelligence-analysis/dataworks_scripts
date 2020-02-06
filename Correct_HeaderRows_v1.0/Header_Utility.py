@@ -173,6 +173,10 @@ with open('config.txt', 'r') as input: #config.txt contains directory (path) to 
                         #Write new header row in output file
                         writer.writerow(newrow2)
 print("Successfully removed special characters")
+print("\nOpen header_repaied.txt to view the corrected header fields")
+
+print("\n")
+
 
 #Finding Duplicates
 with open('header_repaired.txt','rt') as infile, open('duplicate.txt','w') as outfile:
@@ -193,6 +197,8 @@ with open('header_repaired.txt','rt') as infile, open('duplicate.txt','w') as ou
                     continue
                 seen.add(m)
             print("Duplicates found: ",count)
+            if count > 0:
+                print("\nOpen duplicate.txt to view duplicate data fields")
             break
         elif delimited =="|":
             #for reader2 in read:
@@ -210,5 +216,8 @@ with open('header_repaired.txt','rt') as infile, open('duplicate.txt','w') as ou
                     outfile.write(str(m))
                     count2+=1
                 seen.add(m)
-            print("Duplicates found: ",count2)        
+            print("Duplicates found: ",count2) 
+            if count > 0:
+                print("\nOpen duplicate.txt to view duplicate data fields")
+            break
 outfile.close()
