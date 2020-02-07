@@ -62,23 +62,21 @@ Once Python 3.0 has been installed, navigate to your Correct_HeaderRows folder, 
 
 
 ```Command Prompt
-cd C:\Users\ASSOCIATE_ID\.....\Correct_HeaderRows
-C:\Users\ASSOCIATE_ID\.....\Correct_HeaderRows>python3 RemoveSpecialCharacters.py
+cd C:\Users\....\.....\Correct_HeaderRows
+C:\Users\....\.....\Correct_HeaderRows>python3 Header_Utility.py
 ```
 
 ## Support
-For any help or assistance please address the following Cerner Wiki Page:  
+For any help or assistance please address the following contact information 
 
-Emails and Microsoft Team chats are always welcome. You can contact developer on the following: 
-	1. Email: denny.osafo@cerner.com 
-	2. Name: Denny Osafo
+You can contact developer via email on the following: 
+	1. Email: menace3780@gmail.com 
+	2. Name: Dennis Osafo
 
 
 ## Roadmap
 
-This script will keep updating based on how many test cases of special characters are found in the header row of the Client's data in the future. As a result, the database of special characters will keep updating to satisfy all conditions in eliminating unnecessary charcters from the data fields in the header. 
-
-There is a potential release of this program that would identify duplicate data fields in the header row of the raw data.
+This script will keep updating based on how many test cases of special characters are found in the header row of the Client's data in the future. As a result, the database of special characters will keep updating to satisfy all conditions in eliminating unnecessary charcters from the data fields in the header.
 
 
 ## License
