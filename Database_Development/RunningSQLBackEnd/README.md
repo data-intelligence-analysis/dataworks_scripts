@@ -4,7 +4,20 @@ A student application that is to be used by a hypothetical training institution.
 
 
 ##  Table of Contents
-1. [Installation] (#Installation)
+
+1. [Installation](#Installation)
+
+2. [Usage](#Usage)
+
+3. [Support](#Support)
+
+4. [Roadmap](#Roadmap)
+
+5. [License](#License)
+
+6. [Contributing](#Contributing)
 
 
 
+
+## Installation
