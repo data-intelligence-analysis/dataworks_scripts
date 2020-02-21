@@ -81,7 +81,7 @@ Emails are always welcome. You can contact developer on the following:
 
 
 ## Roadmap
-In the future the application would include calculating the GPA of the student based on the grade point of each subject created and assign that to the database. 
+In the future the application would include the GPA of the student based on the grade point of each subject entered and assign that to the database. 
 
 
 
