@@ -2,10 +2,12 @@
 
 **NOTICE**: Please **DO NOT** modify this file or the contents in this repository directly. We have provided two methods 
 to contribute to the program.
-**First Method**
+
+# First Method
 * |OK_ICON| This is good.
 * |FIXME_ICON| Please fix me.
-**Second Method**
+
+# Second Method
 Go to the support section to contact developer of any inquiries you might have
 
 A standard script to remove special characters from the data fields and identify duplicate data fields within the header row of a client's raw data.
