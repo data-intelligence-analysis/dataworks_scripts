@@ -9,7 +9,7 @@ to contribute to the program:
 
 ## Second Method
 Go to the support section to contact developer of any inquiries you might have
-
+<u></u>
 A standard script to remove special characters from the data fields and identify duplicate data fields within the header row of a client's raw data.
 
 Header_Utility is a python script that removes special characters from and identify duplicate data within the header row retrieved from the client's raw data. It detects the delimiter, either a comma(',') or pipe(|), within the header row of a text or csv file and removes the special characters as well as identify duplicates, which ultimately corrects and cleans the fields in the header row for the data architect during the data ingestion process without any errors pertaining to unnecessary characters and data fields in the header. 
