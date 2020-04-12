@@ -89,7 +89,7 @@ You can contact developer via email on the following:
 
 This script will keep updating based on how many test cases of special characters are found in the header row of the Client's data in the future. As a result, the database of special characters will keep updating to satisfy all conditions in eliminating unnecessary characters from the data fields in the header.
 
-I would eventually incorporate a UTF8-BOM to UTF8 converter into the script based on client and operational demand.
+I would eventually incorporate an encoding function that converts the headerfile from UTF8-BOM to UTF8 into the script based on client and operational demand.
 
 
 ## License
