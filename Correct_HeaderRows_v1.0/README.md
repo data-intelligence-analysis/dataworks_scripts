@@ -1,7 +1,7 @@
 # <u>Header_Utility</u>
 A standard script to remove special characters from the data fields and identify duplicate data fields within the header row of a client's raw data.
 
-**NOTICE**: Please **DO NOT** modify this file or the contents in this repository directly. We have provided two methods 
+**NOTICE**: Please **DO NOT** modify this file or the contents in this repository directly. I have provided two methods 
 to contribute to the program:
 
 ## First Method
@@ -87,7 +87,9 @@ You can contact developer via email on the following:
 
 ## Roadmap
 
-This script will keep updating based on how many test cases of special characters are found in the header row of the Client's data in the future. As a result, the database of special characters will keep updating to satisfy all conditions in eliminating unnecessary charcters from the data fields in the header.
+This script will keep updating based on how many test cases of special characters are found in the header row of the Client's data in the future. As a result, the database of special characters will keep updating to satisfy all conditions in eliminating unnecessary characters from the data fields in the header.
+
+I would eventually incorporate a UTF8-BOM to UTF8 converter into the script based on client and operational demand.
 
 
 ## License
