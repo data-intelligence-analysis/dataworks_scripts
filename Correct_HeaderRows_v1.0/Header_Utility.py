@@ -109,7 +109,7 @@ blacklist:Optional[List[str]]=SILLY_DELIMITERS) -> Optional[str]:
     return likely_candidates[0]
 
 #Remove Special Characters 
-with open('config.txt', 'r') as input: #config.txt contains directory (path) to folder
+with open('config.txt', 'r', encoding='utf-8') as input: #config.txt contains directory (path) to folder
     #read path
     read = input.readline()
     #read entire directory
@@ -118,7 +118,7 @@ with open('config.txt', 'r') as input: #config.txt contains directory (path) to 
     #Using os library to read and open files in directory
     for file in os.listdir(index):#("directory is in config.txt e.g.")
         if file.endswith(".txt") and not file.startswith(("config","README","LICENSE-2.0")):
-            with open("header.txt","rt") as infile, open("header_repaired.txt", "wt") as outfile:
+            with open("header.txt","rt", encoding='utf-8') as infile, open("header_repaired.txt", "wt", encoding='utf-8') as outfile:
                 #Read Input File
                 reader = csv.reader(infile)
                 #Write to output file
@@ -145,7 +145,7 @@ with open('config.txt', 'r') as input: #config.txt contains directory (path) to 
                         writer.writerow(new_row2)
 
         elif file.endswith(".csv"):
-            with open("speciality.csv", "rt") as infile, open("repaired.csv", "wt") as outfile:
+            with open("speciality.csv", "rt", encoding='utf-8') as infile, open("repaired.csv", "wt", encoding='utf-8') as outfile:
 
                 #Read Input File
                 reader = csv.reader(infile)
@@ -179,7 +179,7 @@ print("\n")
 
 
 #Finding Duplicates
-with open('header_repaired.txt','rt') as infile, open('duplicate.txt','w') as outfile:
+with open('header_repaired.txt','rt', encoding='utf-8') as infile, open('duplicate.txt','w', encoding='utf-8') as outfile:
     #readerComma = csv.reader(infile, delimiter=(",")) 
     #readerPipe = csv.reader(infile, delimiter=("|"))
     reader = csv.reader(infile)
