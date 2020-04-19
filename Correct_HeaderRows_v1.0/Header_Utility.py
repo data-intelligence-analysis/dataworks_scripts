@@ -122,10 +122,10 @@ with open('config.txt', 'r', encoding='utf-8') as input: #config.txt contains di
         read = input.readlines()
         let = read[0].strip()
         #read entire directory
-        spec = let[let.index('C'):]
+        spec1 = let[let.index('C'):]
     
         #Using os library to read and open files in directory
-        for file in os.listdir(spec):#("directory is in config.txt e.g.")
+        for file in os.listdir(spec1):#("directory is in config.txt e.g.")
             if file.endswith(".txt") and not file.startswith(("config","README","LICENSE-2.0")):
                 with open("header.txt","rt", encoding='utf-8') as infile, open("header_repaired.txt", "wt", encoding='utf-8') as outfile:
                     #Read Input File
