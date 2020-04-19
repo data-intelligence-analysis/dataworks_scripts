@@ -108,74 +108,151 @@ blacklist:Optional[List[str]]=SILLY_DELIMITERS) -> Optional[str]:
 
     return likely_candidates[0]
 
+#Select the type of operating system you are running the script o
+print ("1. Windows\n")
+print ("2. Mac OS X")
+print ('------------')
+user = input('Enter the number for your OS (Operating System): ')
+
+
 #Remove Special Characters 
 with open('config.txt', 'r', encoding='utf-8') as input: #config.txt contains directory (path) to folder
     #read path
-    read = input.readline()
-    #read entire directory
-    index = read[read.index('/'):]
+    if user == str(1):
+        read = input.readlines()
+        let = read[0].strip()
+        #read entire directory
+        spec = let[let.index('C'):]
     
-    #Using os library to read and open files in directory
-    for file in os.listdir(index):#("directory is in config.txt e.g.")
-        if file.endswith(".txt") and not file.startswith(("config","README","LICENSE-2.0")):
-            with open("header.txt","rt", encoding='utf-8') as infile, open("header_repaired.txt", "wt", encoding='utf-8') as outfile:
-                #Read Input File
-                reader = csv.reader(infile)
-                #Write to output file
-                writer = csv.writer(outfile)
-                #If delimiter is pipe
-                conversionComma = set('["/.!@#$%^&*[]()-+={}:<>?/\',`~]')
-                #If delimiter is Comma
-                conversionPipe = set('["/.!@#$%^&*[]()-+={}:<>?/\'|`~]')
+        #Using os library to read and open files in directory
+        for file in os.listdir(spec):#("directory is in config.txt e.g.")
+            if file.endswith(".txt") and not file.startswith(("config","README","LICENSE-2.0")):
+                with open("header.txt","rt", encoding='utf-8') as infile, open("header_repaired.txt", "wt", encoding='utf-8') as outfile:
+                    #Read Input File
+                    reader = csv.reader(infile)
+                    #Write to output file
+                    writer = csv.writer(outfile)
+                    #If delimiter is pipe
+                    conversionComma = set('["/.!@#$%^&*[]()-+={}:<>?/\',`~]')
+                    #If delimiter is Comma
+                    conversionPipe = set('["/.!@#$%^&*[]()-+={}:<>?/\'|`~]')
 
-                #Execute Loop
-                for row in reader:
-                    
-                    delimiter = detect(str(row))
+                    #Execute Loop
+                    for row in reader:
 
-                    #Condition for Delimiter
-                    if delimiter == '|':
-                        #Replace special characters
-                        new_row = ["".join('' if i in conversionComma else i for i in entry) for entry in row]
-                        writer.writerow(new_row)
+                        delimiter = detect(str(row))
 
-                    elif delimiter == ',':
-                        #Replace special characters
-                        new_row2 = ["".join('' if i in conversionPipe else i for i in entry) for entry in row]
-                        writer.writerow(new_row2)
+                        #Condition for Delimiter
+                        if delimiter == '|':
+                            #Replace special characters
+                            new_row = ["".join('' if i in conversionComma else i for i in entry) for entry in row]
+                            writer.writerow(new_row)
 
-        elif file.endswith(".csv"):
-            with open("speciality.csv", "rt", encoding='utf-8') as infile, open("repaired.csv", "wt", encoding='utf-8') as outfile:
+                        elif delimiter == ',':
+                            #Replace special characters
+                            new_row2 = ["".join('' if i in conversionPipe else i for i in entry) for entry in row]
+                            writer.writerow(new_row2)
 
-                #Read Input File
-                reader = csv.reader(infile)
+            elif file.endswith(".csv"):
+                with open("speciality.csv", "rt", encoding='utf-8') as infile, open("repaired.csv", "wt", encoding='utf-8') as outfile:
 
-                #Write to Output File
-                writer = csv.writer(outfile)
+                    #Read Input File
+                    reader = csv.reader(infile)
 
-                ####Special Characters
-                #If delmiter is pipe
-                conversionPipe = set('["/.!@#$%^&*[]()-+={}:<>?/\'|`~]')
-                #If delimiter is Comma
-                conversionComma = set('["/.!@#$%^&*[]()-+={}:<>?/\',`~]')
+                    #Write to Output File
+                    writer = csv.writer(outfile)
 
-                #Execute Loop
-                for row in reader:
-                    delimiter = detect(str(row))
-                    if delimiter == '|': ###Unable to "," fix problem if there is one occurrence of the character
-                        #Replace special characters
-                        newrow = ["".join('' if i in conversionComma else i for i in entry) for entry in row]
-                        #Write new header row in output file
-                        writer.writerow(newrow)
-                    elif delimiter == ',':
-                        #Replace special characters
-                        newrow2 = ["".join('' if i in conversionPipe else i for i in entry) for entry in row]
-                        #Write new header row in output file
-                        writer.writerow(newrow2)
-print("Successfully removed special characters")
-print("\nOpen header_repaied.txt to view the corrected header fields")
+                    ####Special Characters
+                    #If delmiter is pipe
+                    conversionPipe = set('["/.!@#$%^&*[]()-+={}:<>?/\'|`~]')
+                    #If delimiter is Comma
+                    conversionComma = set('["/.!@#$%^&*[]()-+={}:<>?/\',`~]')
 
-print("\n")
+                    #Execute Loop
+                    for row in reader:
+                        delimiter = detect(str(row))
+                        if delimiter == '|': ###Unable to "," fix problem if there is one occurrence of the character
+                            #Replace special characters
+                            newrow = ["".join('' if i in conversionComma else i for i in entry) for entry in row]
+                            #Write new header row in output file
+                            writer.writerow(newrow)
+                        elif delimiter == ',':
+                            #Replace special characters
+                            newrow2 = ["".join('' if i in conversionPipe else i for i in entry) for entry in row]
+                            #Write new header row in output file
+                            writer.writerow(newrow2)
+        print("Successfully removed special characters")
+        print("\nOpen header_repaied.txt to view the corrected header fields")
+
+        print("\n")
+    
+    elif user == str(2):
+        read = input.readlines()
+        let = read[1].strip()
+        #read entire directory
+        spec2 = let[let.index('/'):]
+    
+        #Using os library to read and open files in directory
+        for file in os.listdir(spec2):#("directory is in config.txt e.g.")
+            if file.endswith(".txt") and not file.startswith(("config","README","LICENSE-2.0")):
+                with open("header.txt","rt", encoding='utf-8') as infile, open("header_repaired.txt", "wt", encoding='utf-8') as outfile:
+                    #Read Input File
+                    reader = csv.reader(infile)
+                    #Write to output file
+                    writer = csv.writer(outfile)
+                    #If delimiter is pipe
+                    conversionComma = set('["/.!@#$%^&*[]()-+={}:<>?/\',`~]')
+                    #If delimiter is Comma
+                    conversionPipe = set('["/.!@#$%^&*[]()-+={}:<>?/\'|`~]')
+
+                    #Execute Loop
+                    for row in reader:
+
+                        delimiter = detect(str(row))
+
+                        #Condition for Delimiter
+                        if delimiter == '|':
+                            #Replace special characters
+                            new_row = ["".join('' if i in conversionComma else i for i in entry) for entry in row]
+                            writer.writerow(new_row)
+
+                        elif delimiter == ',':
+                            #Replace special characters
+                            new_row2 = ["".join('' if i in conversionPipe else i for i in entry) for entry in row]
+                            writer.writerow(new_row2)
+
+            elif file.endswith(".csv"):
+                with open("speciality.csv", "rt", encoding='utf-8') as infile, open("repaired.csv", "wt", encoding='utf-8') as outfile:
+
+                    #Read Input File
+                    reader = csv.reader(infile)
+
+                    #Write to Output File
+                    writer = csv.writer(outfile)
+
+                    ####Special Characters
+                    #If delmiter is pipe
+                    conversionPipe = set('["/.!@#$%^&*[]()-+={}:<>?/\'|`~]')
+                    #If delimiter is Comma
+                    conversionComma = set('["/.!@#$%^&*[]()-+={}:<>?/\',`~]')
+
+                    #Execute Loop
+                    for row in reader:
+                        delimiter = detect(str(row))
+                        if delimiter == '|': ###Unable to "," fix problem if there is one occurrence of the character
+                            #Replace special characters
+                            newrow = ["".join('' if i in conversionComma else i for i in entry) for entry in row]
+                            #Write new header row in output file
+                            writer.writerow(newrow)
+                        elif delimiter == ',':
+                            #Replace special characters
+                            newrow2 = ["".join('' if i in conversionPipe else i for i in entry) for entry in row]
+                            #Write new header row in output file
+                            writer.writerow(newrow2)
+        print("Successfully removed special characters")
+        print("\nOpen header_repaied.txt to view the corrected header fields")
+
+        print("\n")   
 
 
 #Finding Duplicates
