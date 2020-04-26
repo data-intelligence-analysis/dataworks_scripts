@@ -1,2 +1,2 @@
 directory_windows = C:\Users\<USERNAME>\<PATH TO Correct_HeaderRows FOLDER>
-directory_macosx = /Users/<USERNAME>/<PATH TO Correct_HeaderRows FOLDER> 
+directory_macosx = /Users/<USERNAME>/<PATH TO Correct_HeaderRows FOLDER>
