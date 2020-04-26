@@ -6,6 +6,8 @@ import os
 import csv
 #Import String
 import string
+#Import System
+import sys
 
 from collections import Counter
 import string
@@ -115,7 +117,7 @@ print ('------------')
 user = input('Enter the number for your OS (Operating System): ')
 
 
-#Remove Special Characters 
+#Remove Special Characters
 with open('config.txt', 'r', encoding='utf-8') as input: #config.txt contains directory (path) to folder
     #read path
     if user == str(1):
@@ -123,7 +125,7 @@ with open('config.txt', 'r', encoding='utf-8') as input: #config.txt contains di
         let = read[0].strip()
         #read entire directory
         spec1 = let[let.index('C'):]
-    
+
         #Using os library to read and open files in directory
         for file in os.listdir(spec1):#("directory is in config.txt e.g.")
             if file.endswith(".txt") and not file.startswith(("config","README","LICENSE-2.0")):
@@ -181,17 +183,19 @@ with open('config.txt', 'r', encoding='utf-8') as input: #config.txt contains di
                             newrow2 = ["".join('' if i in conversionPipe else i for i in entry) for entry in row]
                             #Write new header row in output file
                             writer.writerow(newrow2)
+        outfile.close()
+
         print("Successfully removed special characters")
         print("\nOpen header_repaied.txt to view the corrected header fields")
 
         print("\n")
-    
+
     elif user == str(2):
         read = input.readlines()
         let = read[1].strip()
         #read entire directory
         spec2 = let[let.index('/'):]
-    
+
         #Using os library to read and open files in directory
         for file in os.listdir(spec2):#("directory is in config.txt e.g.")
             if file.endswith(".txt") and not file.startswith(("config","README","LICENSE-2.0")):
@@ -249,15 +253,17 @@ with open('config.txt', 'r', encoding='utf-8') as input: #config.txt contains di
                             newrow2 = ["".join('' if i in conversionPipe else i for i in entry) for entry in row]
                             #Write new header row in output file
                             writer.writerow(newrow2)
+        outfile.close()
+
         print("Successfully removed special characters")
         print("\nOpen header_repaied.txt to view the corrected header fields")
 
-        print("\n")   
+        print("\n")
 
 
 #Finding Duplicates
-with open('header_repaired.txt','rt', encoding='utf-8') as infile, open('duplicate.txt','w', encoding='utf-8') as outfile:
-    #readerComma = csv.reader(infile, delimiter=(",")) 
+with open('header_repaired.txt','rt', encoding='utf-8') as infile, open('duplicates.txt','w', encoding='utf-8') as outfile:
+    #readerComma = csv.reader(infile, delimiter=(","))
     #readerPipe = csv.reader(infile, delimiter=("|"))
     reader = csv.reader(infile)
 
@@ -274,6 +280,7 @@ with open('header_repaired.txt','rt', encoding='utf-8') as infile, open('duplica
                     continue
                 seen.add(m)
             print("Duplicates found: ",count)
+            print("\n")
             if count > 0:
                 print("\nOpen duplicate.txt to view duplicate data fields")
             break
@@ -293,8 +300,20 @@ with open('header_repaired.txt','rt', encoding='utf-8') as infile, open('duplica
                     outfile.write(str(m))
                     count2+=1
                 seen.add(m)
-            print("Duplicates found: ",count2) 
+            print("Duplicates found: ",count2)
+            print("\n")
             if count > 0:
                 print("\nOpen duplicate.txt to view duplicate data fields")
             break
-outfile.close()
+    outfile.close()
+
+#System Exit - Erease all contents
+close = "Application is closed"
+print(close)
+print('-----------------------')
+if close:
+    try:
+        open('header.txt','w').close()
+        sys.exit()
+    except Exception as e:
+        print(e)
