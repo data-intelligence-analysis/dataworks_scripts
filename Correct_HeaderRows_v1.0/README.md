@@ -104,7 +104,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 v1.0 - Current version
 
 <b>Coming soon</b>:
-v1.1 - Convert all files to UTF8, and convert header to delimiter of choice. New file added header_converted.txt/header_converter.csv depending on file choice
+v1.1 - Convert all files to UTF8, and convert header to delimiter of choice. New file added header_converted.txt/header_converter.csv depending on choice of file
 
 
 
