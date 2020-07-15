@@ -89,7 +89,7 @@ You can contact developer via email on the following:
 
 This script will keep updating based on how many test cases of special characters are found in the header row of the Client's data in the future. As a result, the database of special characters will keep updating to satisfy all conditions in eliminating unnecessary characters from the data fields in the header.
 
-I would eventually incorporate an encoding function that converts the headerfile from UTF8-BOM to UTF8 into the script based on client and operational demand.
+Version 1.1 would include an encoding function that converts all files to UTF8 into the script; the ability for the user to convert file to delimiter (PIPE ("|"), comma (","), TAB ("\T"))
 
 
 ## License
@@ -99,6 +99,12 @@ The detect_delimiter module used in this software is Copyright 2018 owned by Tim
 [Detect Delimiter] (http://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+## Versions
+v1.0 - Current version
+
+<b>Coming soon</b>
+v1.1 - Convert all files to UTF8, and convert header to delimiter of choice. New file added header_converted.txt/header_converter.csv depending on file choice
 
 
 
