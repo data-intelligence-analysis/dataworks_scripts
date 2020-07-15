@@ -1,7 +1,7 @@
 # <u>Header_Utility</u>
-A standard script to remove special characters from the data fields and identify duplicate data fields within the header row of a client's raw data.
+A standard script to remove special characters from the data fields and identify duplicate data fields within the header row of the raw data.
 
-**NOTICE**: Please **DO NOT** modify this file or the contents in this repository directly. I have provided two methods 
+**NOTICE**: Please **DO NOT** modify this file or the contents in this repository directly. Use the two methods provided below
 to contribute to the program:
 
 ## First Method
