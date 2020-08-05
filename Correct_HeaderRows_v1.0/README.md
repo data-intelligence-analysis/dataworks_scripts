@@ -102,8 +102,9 @@ The detect_delimiter module used in this software is Copyright 2018 owned by Tim
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 ## Release (Version)
-v1.0 - Reoves special characters and identify duplicates for PIPE and comma delimited header (fieldnames) file
-v1.1 - In addition to removing special characters and identifying duplicates, files are converted to  UTF8, and convert header to delimiter of choice either PIPE ('|'), comma (','), or TAB ('\t'). New file added header_converted.txt depending on choice of file
+v1.0 - Reoves special characters and identify duplicates for PIPE and comma delimited header (fieldnames) file.
+
+v1.1 - In addition to removing special characters and identifying duplicates, files are converted to  UTF8, and convert header to delimiter of choice either PIPE ('|'), comma (','), or TAB ('\t'). New file added header_converted.txt depending on choice of file.
 
 
 
