@@ -55,13 +55,14 @@ Installation guide for Macintosh can be found on https://docs.python.org/3/using
 
 ## Usage
 
-Files in the Correct_HeaderRows Folder:
+Files generated in the Correct_HeaderRows Folder:
 
-1. config.txt -- contains the directory (path) to where the files are located for example : C:\Users\ASSOCIATE_ID\.....\Correct_HeaderRows.
-2. LICENSE-2.0.txt --contains the [Apache License](http://www.apache.org/licenses/LICENSE-2.0)Version 2.0 that governs the use of the detect_delmiter module in the code. 
-3. header.txt (header.csv) -- This is the input file containing **ONLY** the header_row of the raw data.
-4. header_repaired.txt (header_repaired.csv) -- This is the output file that would be generated that contains the ccorrected version of the header row without any uneccessary special characters. 
-5. duplicates.txt -- This is the output file that contains the data field duplicates found in the header_repaired.txt file. 
+1. <b>config.txt</b> -- contains the directory (path) to where the files are located for example : C:\Users\ASSOCIATE_ID\.....\Correct_HeaderRows.
+2. <b>LICENSE-2.0.txt</b> --contains the [Apache License](http://www.apache.org/licenses/LICENSE-2.0)Version 2.0 that governs the use of the detect_delmiter module in the code. 
+3. <b>header.txt (header.csv)</b> -- This is the input file containing **ONLY** the header_row of the raw data.
+4. <b>header_repaired.txt</b> (header_repaired.csv) -- This is the output file that would be generated that contains the ccorrected version of the header row without any uneccessary special characters. 
+5. <b>duplicates.txt</b> -- This is the output file that contains the data field duplicates found in the header_repaired.txt file.
+6. </b>header_converted.txt</b> --
 
 <b>Operation</b>: 
 The user must have access to the raw data, usually in .csv or .txt format, to retrieve the data field header. Once the header row has been retrieved, it must be copied and pasted on to the input file called header.txt located in the Correct_HeaderRows folder on your windows machine and then save the file (header.txt). Be sure to check if the header row has a delimiter (this program reads the common delimiters comma (",") and pipe ("|")). Thereafter, you must open command prompt and navigate to the Correct_HeaderRows folder as described in the <b>installation usage</b> section below and then run
@@ -89,7 +90,7 @@ You can contact developer via email on the following:
 
 This script will keep updating based on how many test cases of special characters are found in the header row of the Client's data in the future. As a result, the database of special characters will keep updating to satisfy all conditions in eliminating unnecessary characters from the data fields in the header.
 
-Version 1.1 would include an encoding function that converts all files to UTF8 into the script; the ability for the user to convert file to delimiter (PIPE ("|"), comma (","), TAB ("\T"))
+Version 1.1 would include an encoding function that converts all files to UTF8 into the script; the ability for the user to convert file to delimiter (PIPE ("|"), comma (","), TAB ("\t"))
 
 
 ## License
@@ -100,11 +101,9 @@ The detect_delimiter module used in this software is Copyright 2018 owned by Tim
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
-## Versions
-v1.0 - Current version
-
-<b>Coming soon</b>:
-v1.1 - Convert all files to UTF8, and convert header to delimiter of choice. New file added header_converted.txt/header_converter.csv depending on choice of file
+## Release (Version)
+v1.0 - Reoves special characters and identify duplicates for PIPE and comma delimited header (fieldnames) file
+v1.1 - In addition to removing special characters and identifying duplicates, files are converted to  UTF8, and convert header to delimiter of choice either PIPE ('|'), comma (','), or TAB ('\t'). New file added header_converted.txt depending on choice of file
 
 
 
