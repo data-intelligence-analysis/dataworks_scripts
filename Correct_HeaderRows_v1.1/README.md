@@ -73,7 +73,7 @@ The user must have access to the raw data, usually in .csv or .txt format, to re
 Once Python 3.0 has been installed, navigate to your Correct_HeaderRows folder, containing the RemoveSpecialCharacters.py, by using the 'cd' command. Thereafter, the program can be launched using the 'python3' argument as follows:
 
 
-<b>Windows</b>>
+<b>Windows</b>
 ```Command Prompt
 cd C:\Users\....\.....\Correct_HeaderRows_v1.1
 C:\Users\....\.....\Correct_HeaderRows>python3 Header_Utility.py
