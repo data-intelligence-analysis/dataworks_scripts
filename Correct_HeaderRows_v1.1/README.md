@@ -62,7 +62,7 @@ Files generated in the Correct_HeaderRows Folder:
 3. <b>header.txt (header.csv)</b> -- This is the input file containing **ONLY** the header_row of the raw data.
 4. <b>header_repaired.txt</b> (header_repaired.csv) -- This is the output file that would be generated that contains the ccorrected version of the header row without any uneccessary special characters. 
 5. <b>duplicates.txt</b> -- This is the output file that contains the data field duplicates found in the header_repaired.txt file.
-6. </b>header_converted.txt</b> --
+6. <b>header_converted.txt</b> -- This the output file that contains the header converted to the choice of delimiter
 
 <b>Operation</b>: 
 The user must have access to the raw data, usually in .csv or .txt format, to retrieve the data field header. Once the header row has been retrieved, it must be copied and pasted on to the input file called header.txt located in the Correct_HeaderRows folder on your windows machine and then save the file (header.txt). Be sure to check if the header row has a delimiter (this program reads the common delimiters comma (",") and pipe ("|")). Thereafter, you must open command prompt and navigate to the Correct_HeaderRows folder as described in the <b>installation usage</b> section below and then run
