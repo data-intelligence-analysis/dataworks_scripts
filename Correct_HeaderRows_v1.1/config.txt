@@ -1,0 +1,2 @@
+directory_windows = C:\Users\
+directory_macosx =  /Users/
