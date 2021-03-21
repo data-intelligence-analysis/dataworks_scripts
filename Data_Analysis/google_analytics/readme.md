@@ -9,18 +9,19 @@
     LO5: Import segments
     LO6: Managing segments
 
-By the end of this course, you will be able to effectively use system segments and create and use custom segments.
-Course Structure
+ By the end of this course, you will be able to <b> effectively use system segments and create and use custom segments.</b>
+
+## Course Structure
 
 This course is divided into 4 parts:
 
     Course Overview: This introductory reading material.
-    How to Use Segments in Google Analytics for Deeper Analysis: This is the hands on project that we will work on in Rhyme.
+    <b> How to Use Segments in Google Analytics for Deeper Analysis:</b> This is the hands on project that we will work on in Rhyme.
     Graded Quiz: This is the final assignment that you need to pass in order to finish the course successfully.
 
-Project Structure
+## Project Structure
 
-The hands on project on How to Use Segments in Google Analytics for Deeper Analysis is divided into following tasks:
+The hands on project on <b>How to Use Segments in Google Analytics for Deeper Analysis</b> is divided into following tasks:
 Task 1: Define segments
 Task 2: Use system segments
 Task 3: Create and use custom segments
@@ -28,7 +29,8 @@ Task 4: Create conditions for custom segments
 Task 5: Create sequences for custom segments
 Task 6: Import custom segments
 Task 7: Manage segments
-Meet the Instructor
+
+## Meet the Instructor
 
 Welcome to this course on How to Use Segments in Google Analytics for Deeper Analysis! I have used Google Analytics for my sites as well as for my clients. I am still amazed how much data is contained within Google Analytics and how that can be used to tell me more about website audiences. Segments is one of those 'features' in Google Analytics that really helps us go deeper into the data to discover more about our website audiences. I am sure you will discover the same as you complete this project. 
 About Rhyme
