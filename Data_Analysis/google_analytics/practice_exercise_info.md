@@ -10,4 +10,3 @@
 #### Task 6: Import custom segments. In this task, you will learn how to import custom segments from the Google Solutions Gallery.     
 #### Task 7: Manage segments. In this task, you will learn how to edit, copy, delete and share your custom segments.
 
-While you are watching me work on each step, you will get a cloud desktop with all the required software pre-installed. This will allow you to follow along the instructions to complete the above mentioned tasks. After all, we learn best with active, hands-on learning
