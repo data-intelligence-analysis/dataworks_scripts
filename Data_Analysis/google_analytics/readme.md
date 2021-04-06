@@ -22,13 +22,13 @@ This course is divided into 4 parts:
 ## Project Structure
 
 The hands on project on <b>How to Use Segments in Google Analytics for Deeper Analysis</b> is divided into following tasks:
-Task 1: Define segments
-Task 2: Use system segments
-Task 3: Create and use custom segments
-Task 4: Create conditions for custom segments
-Task 5: Create sequences for custom segments
-Task 6: Import custom segments
-Task 7: Manage segments
+#### Task 1: Define segments
+#### Task 2: Use system segments
+#### Task 3: Create and use custom segments
+#### Task 4: Create conditions for custom segments
+#### Task 5: Create sequences for custom segments
+#### Task 6: Import custom segments
+#### Task 7: Manage segments
 
 ## Meet the Instructor
 
