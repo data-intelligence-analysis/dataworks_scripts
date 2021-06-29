@@ -1,3 +1,3 @@
-# Files contained in this folder 
+# Projects contained in this folder 
 
-## Controlling Hadoop Jobs using Oozie
+### Controlling Hadoop Jobs using Oozie
